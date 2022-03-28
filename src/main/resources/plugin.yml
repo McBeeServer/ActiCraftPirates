@@ -1,0 +1,10 @@
+name: ActiPirates
+version: '${project.version}'
+main: net.acticraft.plugin.actipirates.ActiPirates
+api-version: 1.18
+authors: [ PxLib ]
+depend: [PlaceholderAPI, Vault]
+commands:
+  gmc:
+  gms:
+  gmsp:
