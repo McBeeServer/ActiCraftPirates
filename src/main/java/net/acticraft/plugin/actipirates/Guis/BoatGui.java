@@ -28,7 +28,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
         if (player.hasPermission("actipirates.boat")) {
 
 
-            Inventory BoatGui = Bukkit.createInventory(null, 9, ChatColor.of("#78B5DA") + "Boat Menu");
+            Inventory BoatGui = Bukkit.createInventory(null, 9, ChatColor.of("#78B5DA") + "Boat Upgrades");
 
             // SetItems
             ItemStack none = new ItemStack(Material.BLACK_STAINED_GLASS_PANE, 1);
@@ -104,7 +104,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
 
 @EventHandler
 public void GamemodeSelector(InventoryClickEvent event) {
-    if(event.getView().getTitle().equalsIgnoreCase(ChatColor.of("#78B5DA") + "Boat Menu") && event.getCurrentItem() != null) {
+    if(event.getView().getTitle().equalsIgnoreCase(ChatColor.of("#78B5DA") + "Boat Upgrades") && event.getCurrentItem() != null) {
 
         if (event.getCurrentItem().getType() == Material.BLACK_STAINED_GLASS_PANE) {
             if (event.getClick().equals(ClickType.RIGHT) || event.getClick().equals(ClickType.LEFT)) {
