@@ -15,8 +15,13 @@ public class Fly implements CommandExecutor {
         if (sender instanceof Player) {
             Player p = (Player) sender;
             if (p.hasPermission("acti.fly")) {
-                p.setGameMode(GameMode.CREATIVE);
-                p.sendMessage(ChatColor.of("#C5AC7A") + "You changed your gamemode to: " + ChatColor.of("#C5AC7A") + "CREATIVE");
+                p.setAllowFlight(p.getAllowFlight() ? false : true);
+                if(p.getAllowFlight()==true){
+                    p.sendMessage(ChatColor.of("#C5AC7A") + "You are now flying!");}
+                    if(p.getAllowFlight() == false) {
+                        p.sendMessage(ChatColor.of("#C5AC7A") + "You are no longer flying!");
+                    }
+
             }else{
                 sender.sendMessage(ChatColor.of("#C5AC7A") + "You do not have permission to execute this command!");
             }
